@@ -263,6 +263,7 @@ ul li a{
 }
 .product__price--actual{
   display: flex;
+  gap: 0.3rem;
 
 }
 .fs-4{
@@ -270,9 +271,9 @@ ul li a{
   padding-right: 30px;
 }
 .price--discount{
-  padding: 5px 6px;
+  padding: 11px 6px;
   align-items: center;
-  display: flex;
+  /* display: flex; */
   background-color: hsl(25, 100%, 94%);
   font-weight: bold;
   color: hsl(26, 100%, 55%);
@@ -285,16 +286,14 @@ ul li a{
 }
 
 .checkout{
-  margin-top: 20px;
+  margin-top: 25px;
   display: flex;
+  gap: 1.2rem;
 }
 .checkout__btn{
- padding-left: 70px;
- padding-right: 70px;
- padding-top: 15px;
- padding-bottom: 15px;
+padding: 11px 40px;
  border-radius: 10px;
- margin-left: 130px;
+ gap: 0.2em;
  border: none;
  color: white;
 background-color: hsl(26, 100%, 55%);
@@ -310,4 +309,29 @@ background-color: hsl(26, 100%, 55%);
   margin-left: 10px;
   font-size: 15px;
 
+}
+
+.checkout__amtBtn {
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 13px 15px;
+  background: hsl(223, 64%, 98%);
+  border-radius: 0.5rem;
+  display: flex;
+ } 
+
+.amt {
+  padding: 4px 5px;
+  height: 20px;
+  width: 40px;
+  place-items: center;
+  border: none;
+  background: hsl(223, 64%, 98%);
+}
+
+.fs-9 {
+  font-size: 1rem;
+  font-weight: 700;
 }
