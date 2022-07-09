@@ -10,7 +10,11 @@ body{
     margin-left: auto;
     margin-right: auto;
     height: 900px;
+    position: relative;
     
+}
+header {
+  position: relative;
 }
 
 .container{
@@ -91,8 +95,9 @@ ul li a{
     margin-right:45px;
 }
 
-.cartIcon{
+.cart-Icon{
     margin-top: 15px;
+    cursor: pointer;
 
 }
 .avatar{
@@ -141,6 +146,10 @@ ul li a{
 /* mobile version */
 
 @media all and (max-width:960px){
+  header{
+    position: relative;
+  }
+
   header .container{
       flex-direction: row;
       align-items: flex-start;
@@ -162,6 +171,20 @@ ul li a{
   .madehead h1{
     visibility: hidden;
 
+  }
+
+  header .modal-overlay {
+    display: inline-block;
+   position: absolute;
+   top: 6rem;
+     left: 1rem;
+  }
+
+  header .modal-container {
+  
+    max-width: 420px;
+    width: 97vw;
+    height: 35vh;
   }
 
   li{
@@ -189,7 +212,7 @@ ul li a{
      
   }
   
-  .cartIcon{
+  .cart-Icon{
       padding-top: 8px;
       width:20px ;
       
@@ -291,7 +314,7 @@ ul li a{
   gap: 1.2rem;
 }
 .checkout__btn{
-padding: 11px 40px;
+padding: 4px 46px;
  border-radius: 10px;
  gap: 0.2em;
  border: none;
@@ -303,7 +326,7 @@ background-color: hsl(26, 100%, 55%);
 }
 .checkout__btn:hover{
   background-color: hsl(24, 100%, 74%);
-
+   cursor: pointer;
 }
 .fs-7{
   margin-left: 10px;
@@ -330,8 +353,75 @@ background-color: hsl(26, 100%, 55%);
   border: none;
   background: hsl(223, 64%, 98%);
 }
+.amt:hover {
+  cursor: pointer;
+background : hsl(24, 100%, 74%, 10%);
+}
+
+/* .ja{
+  height: 30px;
+}  */
 
 .fs-9 {
   font-size: 1rem;
   font-weight: 700;
 }
+
+use:hover {
+  fill:hsl(24, 100%, 74%);
+}
+
+.modal-overlay {
+  position: absolute;
+  top: 79px;
+  left: 62%;
+  width: 50px;
+  height: 40px;
+  /* background: rgba(73, 166, 233, 0.5); */
+  display: grid;
+  place-items: center;
+  transition: all 0.01s linear;
+  visibility: hidden;
+  z-index: 1;
+}
+
+/* OPEN/CLOSE CART */
+.open-modal {
+  visibility: visible;
+  z-index: 1;
+}
+
+.modal-container {
+  background: #fff;
+  border-radius: 0.5rem;
+  width: 20vw;
+  height: 27vh;
+  max-width: 620px;
+  display: grid;
+  /* place-items: center; */
+  position: relative;
+  box-shadow: 1px 20px 27px rgb(162, 160, 160)
+}
+
+.modal-overlay .modal-container .text {
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.modal-overlay .modal-container h3{
+  margin: 10px;
+  padding-left: 7px;
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+ .modal-container h3::after {
+  content: "";
+  position: absolute;
+  top: 25%;
+  left: 0;
+  width: 100%;
+  height: 0.5px;
+  background: rgb(136, 134, 134, 0.4);
+} 
