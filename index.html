@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+<!-- <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">  -->
 
   <title>E-commerce product page</title>
 
@@ -17,7 +17,7 @@
                   <h1>sneakers</h1 class="navbar-links">
                   <div class="nav-toggle" id="navToggle">
                     <img id="hamburger" class="navIcon" src="/CH1-team-6/ecommerce-product-page-main/images/icon-menu.svg" alt="Hamburger Menu">
-                    <img class="navIcon hidden" src="/Ecomerce-Website-team-6/ecommerce-product-page-main/images/icon-close.svg" alt="Close Menu">
+                    <!-- <img class="navIcon hidden" src=/*"/Ecomerce-Website-team-6/ecommerce-product-page-main/images/icon-close.svg" */alt="Close Menu"> -->
                  </div>
               </div>
               <nav class="navbar">
@@ -30,9 +30,9 @@
                   </ul>
               </nav>
                       <!-- sideImages -->
-                      <div class="image-list">
-                      <div class="sideImages">
-                        <a href=""> <img  class="cartIcon" src="/CH1-team-6/ecommerce-product-page-main/images/icon-cart.svg" alt="Cart Image"></a> 
+                      <div class="image-list" >
+                      <div class="sideImages click-cart">
+                         <img  class="cart-Icon" src="/CH1-team-6/ecommerce-product-page-main/images/icon-cart.svg" alt="Cart Image">
                        </div>
                        <div class="sideImages">
                        <a href=""> <img  class="avatar" src="/CH1-team-6/ecommerce-product-page-main/images/image-avatar.png" alt="avatar Image"></a>
@@ -40,7 +40,15 @@
                        </div>
                     <!-- end sideImages -->
          
-  </div>         
+  </div> 
+  <!-- dropdown for Cart  -->
+  <div class="modal-overlay">
+    <div class="modal-container">
+      <h3>Cart</h3>
+      <span class="text">Your cart is empty.</span>
+    </div>
+  </div>
+  <!-- end of dropdown for cart -->
  </header>
 
  
@@ -114,7 +122,7 @@
      <section class="checkout flex gap-sizer-1">
      <div class="checkout__amt flex">
       <div class="checkout__amtBtn rounded flex bg-alt-bkg3">
-      <button id="amt--decrease" class="amt grid" aria-label="Decrease quantity"><svg width="12" height="4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <button id="amt--decrease" class="btn decrease amt ja grid" aria-label="Decrease quantity"><svg width="12" height="4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
        <defs>
         <path
          d="M11.357 3.332A.641.641 0 0 0 12 2.69V.643A.641.641 0 0 0 11.357 0H.643A.641.641 0 0 0 0 .643v2.046c0 .357.287.643.643.643h10.714Z"
@@ -123,7 +131,7 @@
        <use fill="#FF7E1B" fill-rule="nonzero" xlink:href="#a" />
       </svg></button>
       <span id="qty" class="font-bold fs-9" aria-label="Current quantity">0</span>
-      <button id="amt--increase" class="amt grid" aria-label="Increase quantity"><svg width="12" height="12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <button id="amt--increase" class="btn increase amt grid" aria-label="Increase quantity"><svg width="12" height="12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
        <defs>
         <path
          d="M12 7.023V4.977a.641.641 0 0 0-.643-.643h-3.69V.643A.641.641 0 0 0 7.022 0H4.977a.641.641 0 0 0-.643.643v3.69H.643A.641.641 0 0 0 0 4.978v2.046c0 .356.287.643.643.643h3.69v3.691c0 .356.288.643.644.643h2.046a.641.641 0 0 0 .643-.643v-3.69h3.691A.641.641 0 0 0 12 7.022Z"
@@ -157,6 +165,6 @@
 
   0
   Add to cart -->
-
+<script src="app.js"></script>
 </body>
 </html>
