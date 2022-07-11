@@ -67,7 +67,7 @@ ul li a{
   left: 25px;
   right: 0;
   bottom: 0;
-  top: 6.2rem;
+  top: 3.8rem;
   height: 3px;
   background-color: hsl(26, 100%, 55%);
   transition: 300ms ease-out;
@@ -341,7 +341,7 @@ ul li a{
   /* desktop version  */
   @media only screen and (min-width: 961px){  
   .section-container{
-    margin: 0 180px 0 150px;
+    margin: 0 180px 0 150px;    
   }
   .lightbox{
     position: relative;
@@ -362,12 +362,11 @@ ul li a{
     width: auto;
     height: 500px;
     border-radius: 20px;
-    
+    margin-bottom: -330px;
   
   }
   .thumb-gallery{
     display: flex;
-    margin-top: -990px;
     flex-direction: row;
   }
   .arrows{
