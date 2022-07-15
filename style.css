@@ -185,9 +185,7 @@ ul li a{
 /* mobile version */
 
 @media only screen and (max-width: 960px){
-  .container{
-   
-  }
+ 
   header .container{
       flex-direction: row;
       align-items: flex-start;
@@ -260,19 +258,11 @@ ul li a{
   }
   .Feature-1-2{
     position: absolute;
-    top: 33rem;
+    top: 29rem;
     left: 32px;
    
   }
-  .f-path-bold {
-    font-size: 40px;
-    width: 400px;
-    
-}       
-.f-path-text-p2 {
-    font-size: 19px;
-   
-}
+
 
   .thumb-gallery{
     visibility: hidden;
@@ -413,6 +403,9 @@ ul li a{
     left: 590px;
     right: 0;
   
+  }
+  .f-path-bold {
+    width: auto;
   }
   .img-text{
     width: auto;
