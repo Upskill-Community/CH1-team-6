@@ -7,8 +7,6 @@
 body{
     overflow-x: hidden;
     font-family: 'Kumbh Sans', sans-serif;
-    padding: 0;
-   
     height: 900px;
     
 }
@@ -153,7 +151,9 @@ ul li a{
 
 /* feature-path-text begins */
 
-
+.Feature-1-2{
+  margin-right: 50px;
+}
 .f-path-text-p{
     font-size: 12px;
     letter-spacing: 2px;
@@ -165,14 +165,14 @@ ul li a{
 }
 .f-path-bold {
     color: hsl(0, 0%, 0%);
-    width: 400px;
+    width: auto;
     padding-bottom: 26px;
     font-size: 40px;
     
 }       
 .f-path-text-p2 {
     font-size: 19px;
-    width:470px;
+    width:auto;
     line-height: 23px;
     color:  hsl(219, 9%, 45%);
 }
@@ -184,7 +184,10 @@ ul li a{
 
 /* mobile version */
 
-@media only screen and (max-width: 960px){
+@media only screen and (max-width: 1170px){
+  .container{
+   
+  }
   header .container{
       flex-direction: row;
       align-items: flex-start;
@@ -249,6 +252,7 @@ ul li a{
   }
   .section-container{
     margin: 0;
+   
   }
   .lightbox{
     position: relative;
@@ -258,6 +262,7 @@ ul li a{
     position: absolute;
     top: 33rem;
     left: 32px;
+   
   }
 
   .thumb-gallery{
@@ -384,9 +389,10 @@ ul li a{
 
 
   /* desktop version  */
-  @media only screen and (min-width: 961px){  
+  @media only screen and (min-width: 1171px){  
   .section-container{
-    margin: 0 180px 0 150px;    
+    margin: 0 0px 0 120px;    
+   
   }
   .lightbox{
     position: relative;
@@ -396,6 +402,7 @@ ul li a{
     position: absolute;
     top: 60px;
     left: 590px;
+    right: 0;
   
   }
   .img-text{
@@ -437,7 +444,7 @@ ul li a{
   
 .product{
   position: absolute;
-  top: 290px;
+  top: 300px;
 }
 .product__price--actual{
   display: flex;
@@ -457,27 +464,27 @@ ul li a{
   color: hsl(26, 100%, 55%);
 }
 .price--original{
-  font-size: 20px;
-  text-decoration: line-through;
-  margin-top: 10px;
-  color:  hsl(220, 14%, 75%);
+font-size: 20px;
+text-decoration: line-through;
+margin-top: 10px;
+color:  hsl(220, 14%, 75%);
 }
 
 .checkout{
-  margin-top: 25px;
-  display: flex;
-  gap: 1.2rem;
+margin-top: 25px;
+display: flex;
+gap: 1.2rem;
 }
 .checkout__btn{
 padding: 11px 40px;
- border-radius: 10px;
- gap: 0.2em;
- border: none;
- color: white;
+border-radius: 10px;
+gap: 0.2em;
+border: none;
+color: white;
 background-color: hsl(26, 100%, 55%);
- display: flex;
- justify-content: center;
- align-items: center;
+display: flex;
+justify-content: center;
+align-items: center;
 }
 .checkout__btn:hover{
   background-color: hsl(24, 100%, 74%);
