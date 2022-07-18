@@ -508,6 +508,39 @@ ul li a {
     opacity: 0.6;
   }
 
+  /* lightbox .popup-image */
+  
+  .lightbox .popup-image {
+        position: absolute;
+        top: 0; left: 0;
+        height: 60%;
+        width: 100%;
+        z-index: 100;
+        display: none;
+      }
+      .lightbox .popup-image  span{
+        position: fixed;
+        top: 0; right: 0;
+        font-size: 50px;
+      
+        color :#ff7d1a;
+        cursor: pointer;
+        z-index: 100;
+      }
+  
+      .lightbox .popup-image img {
+        position: absolute;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+        border: 5px solid #fff;
+        border-radius: 5px;
+        width: 750px;
+        object-fit: cover;
+      }
+
+   /* lightbox .popup-image ends */
+  
+
   .product {
     position: absolute;
     top: 270px;
