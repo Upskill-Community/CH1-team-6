@@ -29,6 +29,9 @@ btns.forEach(function (btn){
   } else if (style.contains('increase')){
    count++;
   }
+  else {
+    count = 0;
+  }
   qty.textContent = count;
   updateCartState(count);
   round.textContent = count;
@@ -84,7 +87,7 @@ const checkoutState = {
          </div>
         </div>
       </div>
-        <button class="cart__body--btn">Checkout
+        <button id="cart-body-btn" class="cart__body--btn">Checkout
         </button>`
 }
 
@@ -93,6 +96,7 @@ function togglecart(){
  clickCart.getAttribute('aria-expanded') === 'false' ? clickCart.setAttribute('aria-expanded', 'true') :  clickCart.setAttribute('aria-expanded', 'false');
 
 clickCart.getAttribute('aria-expanded') === 'false' ? cartPanel.setAttribute('disabled', 'true') : cartPanel.removeAttribute('disabled');
+count = 0;
 }
 
 //function used to toggle the product added to cart
@@ -111,16 +115,20 @@ function updateCartState(num){
  }
 }
 
-/*   EVENT LISTNERS */
+/*  ******** EVENT LISTENERS ******** */
+// add to cart button
 checkoutBtn.addEventListener('click', () => {
   togglecart();
   cartBarge();
 });
+
 clickCart.addEventListener('click', togglecart);
 
 cartPanel.addEventListener('click', (e) => {
   e.currentTarget === e.target && togglecart();
   e.target === document.querySelector('#trash') && updateCartState(0);
+  const cartBodyBtn = document.querySelector('#cart-body-btn');
+  cartBodyBtn == updateCartState(0);
 });
 
 openMenuBtn.addEventListener('click',toggleMenu);
