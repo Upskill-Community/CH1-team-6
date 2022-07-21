@@ -93,6 +93,7 @@ function togglecart(){
  clickCart.getAttribute('aria-expanded') === 'false' ? clickCart.setAttribute('aria-expanded', 'true') :  clickCart.setAttribute('aria-expanded', 'false');
 
 clickCart.getAttribute('aria-expanded') === 'false' ? cartPanel.setAttribute('disabled', 'true') : cartPanel.removeAttribute('disabled');
+  count = 0;
 }
 
 //function used to toggle the product added to cart
