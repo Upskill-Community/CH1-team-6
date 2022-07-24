@@ -9,6 +9,7 @@ body {
   overflow-x: hidden;
   font-family: 'Kumbh Sans', sans-serif;
   height: 900px;
+  position: relative;
 
 }
 
@@ -163,6 +164,7 @@ ul li a {
   color: black;
 }
 
+
 /* End ToggleMenu */
 
 
@@ -211,6 +213,9 @@ ul li a {
     flex-direction: row;
     align-items: flex-start;
   }
+  body{
+    height: 1050px;
+  }
 
   header .container .madehead h1 {
     position: absolute;
@@ -252,8 +257,7 @@ ul li a {
     display: block;
   }
 
-  .nav__panel{
-  }
+ 
 
   .nav-toggle .navIcon {
     padding: 10px 0;
@@ -267,6 +271,10 @@ ul li a {
     /* padding-bottom: 2px; */
     margin-bottom: -55px;
     margin-left: -25px;
+  }
+  .nav__link:hover{
+    color: grey;
+   
   }
 
   .image-list {
@@ -350,7 +358,7 @@ ul li a {
   }
 
   .arrows {
-    margin-top: -300px;
+    margin-top: -250px;
     display: flex;
     justify-content: space-between;
   }
@@ -591,6 +599,18 @@ ul li a {
       margin-top: -0.1rem;
       background: #fff;
     }
+    .footer{
+ 
+      position:absolute;
+      bottom:0;
+      width:100%;
+      text-decoration: none;
+      text-align: center;
+      padding: 20px;
+      margin: auto;
+      height:60px;   /* Height of the footer */
+      
+   }
 
 }
 
@@ -601,7 +621,9 @@ ul li a {
   .section-container {
     margin: 0 0px 0 120px;
 
+    
   }
+ 
 
   .lightbox {
     position: relative;
@@ -892,4 +914,20 @@ ul li a {
     margin-top: -0.1rem;
     background: #fff;
   }
+}
+
+.footer{
+ 
+   position:absolute;
+   bottom:0;
+   width:100%;
+   text-decoration: none;
+   text-align: center;
+   padding-top: 50px;
+   height:60px;   /* Height of the footer */
+   
+}
+.copyright a{
+  text-decoration: none;
+  color: hsl(26, 100%, 55%);;
 }

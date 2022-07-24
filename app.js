@@ -84,7 +84,7 @@ const checkoutState = {
          </div>
         </div>
       </div>
-        <button class="cart__body--btn">Checkout
+        <button class="cart__body--btn " >Checkout
         </button>`
 }
 
