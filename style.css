@@ -31,7 +31,7 @@ body {
   display: none;
   position: relative;
   margin-top: 4px;
-  left: 1rem;
+  left: 2rem;
 }
 
 .hidden {
@@ -249,7 +249,7 @@ ul li a {
  
 
  .navbar-h1{
-  margin-left: 50px;
+  margin-left: 60px;
  }
 
   li {
