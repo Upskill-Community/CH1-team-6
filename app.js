@@ -9,6 +9,10 @@ const cartBody = document.querySelector('#cart__body');
 const cartPanel = document.querySelector('#cartPanel');
 const trashBtn = document.querySelector('#trash');
 const round = document.querySelector('#round');
+const gallery = document.querySelectorAll('.pic');
+const heroImg = document.querySelector('.hero');
+const btnNext = document.querySelector('.next');
+const btnPrevious = document.querySelector('.previous');
 //set initial counter
 let count = 0;
 
@@ -84,7 +88,7 @@ const checkoutState = {
          </div>
         </div>
       </div>
-        <button class="cart__body--btn">Checkout
+        <button class="cart__body--btn" id="cart__checkout" >Checkout
         </button>`
 }
 
@@ -112,42 +116,14 @@ function updateCartState(num){
  }
 }
 
-//function for images 
-const gallery = document.querySelectorAll('.pic');
-const heroImg = document.querySelector('.product-hero');
-
-const btnNext = document.querySelector('.next');
-const btnPrevious = document.querySelector('.previous');
-
-const overlay = document.querySelector('.overlay');
-const lightbox = document.querySelector('.lightbox');
-
-let lightboxGallery;
-let lightboxHero;
-
-
-
-
-gallery.forEach(img => {
-    img.addEventListener('click', onThumbClick);
-});
-
-btnNext.addEventListener('click', handleBtnClickNext);
-btnPrevious.addEventListener('click', handleBtnClickPrevious);
-
-
-
-
-
 function onThumbClick(event) {
-    //clear active state for all thumbnails
-    gallery.forEach(img => {
-        img.classList.remove('active');
-    });
-    //set active thumbnail
-    event.target.parentElement.classList.add('active');
-    //update hero image
-    heroImg.src = event.target.src.replace('-thumbnail', '');
+  gallery.forEach(img => {
+    img.classList.remove('active');
+  });
+
+  event.target.parentElement.classList.add('active');
+
+  heroImg.src = event.target.src.replace('-thumbnail', '');
 }
 
 function handleBtnClickNext() {
@@ -168,13 +144,14 @@ function handleBtnClickPrevious() {
     setHeroImage(imageIndex);
 }
 
+
 function getCurrentImageIndex() {
-    const imageIndex = parseInt(heroImg.src.split('\\').pop().split('/').pop().replace('.jpg', '').replace('image-product-', ''));
-    return imageIndex;
+  const imageIndex = parseInt(heroImg.src.split('\\').pop().split('/').pop().replace('.jpg', '').replace('image-product-', ''));
+   return imageIndex;
 }
 
 function setHeroImage(imageIndex) {
-    heroImg.src = `./images/image-product-${imageIndex}.jpg`;
+    heroImg.src = `/CH1-team-6/ecommerce-product-page-main/images/image-product-${imageIndex}.jpg`;
     //images are not sync
     gallery.forEach(img => {
         img.classList.remove('active');
@@ -182,6 +159,10 @@ function setHeroImage(imageIndex) {
     //set active thumbnail
     gallery[imageIndex-1].classList.add('active');
 }
+
+gallery.forEach(img => {
+  img.addEventListener('click', onThumbClick);
+});
 
 
 /*   EVENT LISTNERS */
@@ -194,7 +175,97 @@ clickCart.addEventListener('click', togglecart);
 cartPanel.addEventListener('click', (e) => {
   e.currentTarget === e.target && togglecart();
   e.target === document.querySelector('#trash') && updateCartState(0);
+ //checkout button
+ e.target === document.querySelector('#cart__checkout') && updateCartState(0);
 });
 
 openMenuBtn.addEventListener('click',toggleMenu);
 closeMenuBtn.addEventListener('click',toggleMenu);
+
+
+btnNext.addEventListener('click', handleBtnClickNext);
+btnPrevious.addEventListener('click', handleBtnClickPrevious);
+
+
+
+const overLay = document.querySelector('.overlay');
+const lightBox = document.querySelector('.img-text');
+const btnclose = document.querySelector('.btnClose');
+
+let lightboxGallery;
+let lightboxHero;
+
+heroImg.addEventListener('click', onHeroImgClick);
+
+function onHeroImgClick(){
+      if (window.innerWidth >= 1200){
+          if (overLay.childElementCount == 1){
+
+            const newNode = lightBox.cloneNode(true);
+            overLay.appendChild(newNode);
+
+            const btnOverlayClose = document.querySelector('#btnOverlayClose');
+            btnOverlayClose.addEventListener('click', onBtnOverlayClose);
+
+            lightboxGallery = overLay.querySelectorAll('.pic')
+            lightboxHero = overLay.querySelector('.hero');
+            lightboxGallery.forEach(img => {
+              img.addEventListener('click', onThumbClickLightbox);
+            });
+
+            const btnOverlayNext = overLay.querySelector('.next');
+            const btnOverlayPrevious = overLay.querySelector('.previous');
+            btnOverlayNext.addEventListener('click', handleBtnClickNextOverlay);
+            btnOverlayPrevious.addEventListener('click', handleBtnClickPreviousOverlay);
+          }
+          overLay.classList.remove('hidden');
+      }
+}
+
+function onBtnOverlayClose(){
+  btnclose.parentElement.classList.add('hidden');
+}
+
+function onThumbClickLightbox(event) {
+ lightboxGallery.forEach(img => {
+    img.classList.remove('active');
+  });
+  event.target.parentElement.classList.add('active');
+  lightboxHero.src = event.target.src.replace('-thumbnail', '');
+}
+
+
+function handleBtnClickNextOverlay() {
+    let imageIndex = getOverlayCurrentImageIndex();
+    imageIndex++;
+    if (imageIndex > 4) {
+        imageIndex = 1;
+    }
+    setOverlayHeroImage(imageIndex);
+}
+
+function handleBtnClickPreviousOverlay() {
+    let imageIndex = getOverlayCurrentImageIndex();
+    imageIndex--;
+    if (imageIndex < 1) {
+        imageIndex = 4;
+    }
+    setOverlayHeroImage(imageIndex);
+}
+
+
+function getOverlayCurrentImageIndex() {
+  const imageIndex = parseInt(lightboxHero.src.split('\\').pop().split('/').pop().replace('.jpg', '').replace('image-product-', ''));
+   return imageIndex;
+}
+
+function setOverlayHeroImage(imageIndex) {
+    lightboxHero.src = `/CH1-team-6/ecommerce-product-page-main/images/image-product-${imageIndex}.jpg`;
+    //images are not sync
+   lightboxGallery.forEach(img => {
+        img.classList.remove('active');
+    });
+    //set active thumbnail
+    lightboxGallery[imageIndex-1].classList.add('active');
+}
+
