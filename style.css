@@ -98,7 +98,7 @@ ul li a {
 .image-list {
   position: relative;
   display: flex;
-  padding-left: 280px;
+  padding-left: 220px;
   align-items: center;
   justify-content: center;
 
@@ -227,6 +227,7 @@ ul li a {
   }
   body{
     height: 1000px;
+    overflow-x: hidden;
   }
 
   header .container .madehead h1 {
@@ -293,6 +294,7 @@ ul li a {
   .image-list {
     position: relative;
     top: 0;
+    left: -5px;
 
   }
 
@@ -303,10 +305,10 @@ ul li a {
 
 .round {
   position: absolute;
-  right: 3.65rem;
-  top: 1.3rem;
-  width: 17px;
-  height: 14px;
+  right: 4.6rem;
+  top: -0.1rem;
+  width: 14px;
+  height: 12px;
   border-radius: 50%;
   background-color: hsl(26, 100%, 55%);
   }
@@ -340,43 +342,60 @@ ul li a {
 
   .Feature-1-2 {
     padding: 30px;
-    margin-top: -710px;
+    /* margin-top: -710px; */
     width: 100%;
   }
   .img-text{
-   display: block;
+   position: relative;
   
   }
 
 
-  .thumb-gallery {
-    visibility: hidden;
+ .img-text .thumb-gallery {
+    display: none;
   }
 
  .product-img{
-  max-width: 100%;
-  height: auto;
+  width: 100%;
+  height: 376px;
  
 
  }
-.product-hero {
+/* .product-hero {
   position: relative;
-}
-  .arrows {
-    display: flex;
-    justify-content: space-between;
-    position: absolute;
-    top:50%;
-    margin: 0 40px;
-  }
+} */
 
-  .arrow {
-    
-    background: white;
-    padding: 15px 20px;
-    border-radius: 50%;
-    opacity: 1;
-  }
+.img-text .previous {
+  left: 4%;
+}
+.img-text .previous:hover {
+  left: 3%;
+}
+
+.img-text .next {
+  right: 4%;
+}
+.img-text .next:hover {
+  right: 3%;
+}
+
+.img-text .arrow {
+  position: absolute;
+  top: 50%;
+  /* transform: translateY(-50%); */
+  
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 50%;
+  width: 1.8rem;
+  height: 1.8rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
 
   .arrow:hover {
     opacity: 0.8;
@@ -481,7 +500,7 @@ ul li a {
 
     .cart-container {
       position: absolute;
-      left: 2rem;
+      left: 3rem;
       inset: 0;
       z-index: 10;
       padding: 0.63rem;
@@ -494,13 +513,13 @@ ul li a {
   
     .cart {
       position: absolute;
-      top: 4.5rem;
+      top: 6rem;
       left: 0.7rem;
       background-color: hsl(25, 100%, 99%);
       box-shadow: 0px 10px 25px hsl(25, 100%, 3%, 0.25);
-      width: 400px;
+      width: 369px;
       height: 300px;
-      max-width: 395px;
+      max-width: 356px;
       display: grid;
       z-index: 15;
       border-radius: 0.5rem;
@@ -631,15 +650,17 @@ ul li a {
 
   .lightbox {
     position: relative;
-    margin-left: 30px;
+    margin-left: 40px;
 
   }
 
   .Feature-1-2 {
     position: absolute;
-    top: 60px;
-    left: 450px;
+    top: 85px;
+    left: 400px;
     right: 0;
+    height: 50%;
+    width: 400px;
 
   }
   .navbar-h1{
@@ -654,34 +675,81 @@ ul li a {
 
   .product-hero{
     width: auto;
-    margin-top: 70px;
+    margin-top: 20px;
+    position: relative;
 
   }
   .product-hero img {
-    width: auto;
-    height: 350px;
-    border-radius: 20px;
+    width: 290px;
+    height: 295px;
+    border-radius: 10px;
     margin-bottom: -330px;
 
   }
 
+
+.product-hero .previous {
+  left: 2%;
+}
+
+.product-hero .previous:hover {
+  left: 3%;
+}
+
+.product-hero .next {
+  right: 68%;
+}
+
+.product-hero .next:hover {
+  right: 67%;
+}
+.product-hero .arrow {
+  position: absolute;
+  top: 190px;
+  transform: translateY(-50%);
+
+  background-color: hsl(0, 0%, 100%);;
+  border-radius: 50%;
+  width: 1.7rem;
+  height: 1.7rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.product-hero .arrow img {
+  position: absolute;
+  top: 7px;
+  left: 6px;
+  width: 15px;
+  height: 15px;
+}
+
+.product-hero .arrow{
+  display: none;
+}
+
+
+
+
+
   .thumb-gallery {
     display: flex;
-    margin-top: 300px;
+    margin-top: 350px;
     flex-direction: row;
   }
 
-  .arrows {
-    visibility: hidden;
-  }
 
   .pic {
-    padding-right: 30px;
+    padding-right: 20px;
   }
 
   .pic img {
-    border-radius: 20px;
-    width: 65px;
+    border-radius: 10px;
+    width: 58px;
     height: auto;
   }
 
@@ -699,7 +767,7 @@ ul li a {
 
   .product {
     position: absolute;
-    margin-top: 30px;
+    margin-top: 18px;
 
 
   }
@@ -719,11 +787,15 @@ ul li a {
    font-size: 10px;
   }
   .f-path-bold{
-    font-size: 30px;
+    font-size: 31px;
+    margin-top: -10px;
+    letter-spacing: 1px;
+    line-height: 29px;
   }
   .f-path-text-p2{
     font-size: 13px;
-    line-height: 20px;
+    line-height: 22px;
+    margin-top: -9px;
     
   }
 
@@ -739,18 +811,18 @@ ul li a {
   .price--original {
     font-size: 17px;
     text-decoration: line-through;
-    margin-top: 10px;
+    margin-top: 5px;
     color: hsl(220, 14%, 75%);
   }
 
   .checkout {
-    margin-top: 25px;
+    margin-top: 20px;
     display: flex;
     gap: 1rem;
   }
 
   .checkout__btn {
-    padding: 11px 40px;
+    padding: 6px 45px;
     border-radius: 10px;
     gap: 0.2em;
     border: none;
@@ -763,12 +835,13 @@ ul li a {
 
   .checkout__btn:hover {
     background-color: hsl(24, 100%, 74%);
+    cursor: pointer;
 
   }
 
   .fs-7 {
     margin-left: 10px;
-    font-size: 10px;
+    font-size: 12px;
 
   }
 
@@ -792,6 +865,9 @@ ul li a {
     border: none;
     background: hsl(223, 64%, 98%);
   }
+  .amt:hover{
+    cursor: pointer;
+  }
 
   .fs-9 {
     font-size: 1rem;
@@ -800,10 +876,10 @@ ul li a {
 
   .round {
     position: absolute;
-    right: 8.5rem;
-    top: 0.56rem;
-    width: 17px;
-    height: 14px;
+    right: 4.75rem;
+    top: 0.4rem;
+    width: 15px;
+    height: 11.5px;
     border-radius: 50%;
     background-color: hsl(26, 100%, 55%);
 
@@ -829,12 +905,12 @@ ul li a {
 
   .cart {
     position: absolute;
-    top: 5rem;
-    left: 53rem;
+    top: 4.5rem;
+    left: 52rem;
     background-color: hsl(25, 100%, 99%);
     box-shadow: 0px 10px 25px hsl(25, 100%, 3%, 0.25);
     width: 320px;
-    height: 207px;
+    height: 180px;
     max-width: 356px;
     display: grid;
     z-index: 15;
@@ -861,7 +937,7 @@ ul li a {
   .empty {
     font-weight: bold;
     color: hsl(219, 9%, 45%);
-    margin-top: -4rem;
+    margin-top: -7rem;
   }
 
   .cart__body--btn {
@@ -873,7 +949,8 @@ ul li a {
     border-radius: 0.5rem;
     width: 100%;
     border: none;
-    margin-top: -2rem;
+    margin-top: -2.5rem;
+    /* margin-left: 0.2rem; */
   }
 
   .cart__body--content {
@@ -906,6 +983,7 @@ ul li a {
     gap: 1rem;
     margin-top: -6rem;
     font-size: 0.9rem;
+    margin-left: -0.1rem;
   }
 
   .cart__img {
@@ -929,8 +1007,6 @@ ul li a {
   .text-trash {
     display: flex;
     gap: 5rem;
-    /* justify-content: right;
-    align-items: flex-end; */
   }
 
   .trash {
@@ -944,8 +1020,60 @@ ul li a {
   margin-top: 50px;
   font-size: 14px;
   
-  
  }
+
+ .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 38rem;
+  background: hsl(0, 0%, 0%, 75%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+ }
+ .overlay .btnClose{
+  position: absolute;
+  top: 2rem;
+  right: 33rem;
+  width: 57rem;
+  text-align: end;
+  padding: 2rem 0;
+  z-index: 2;
+ }
+ .overlay .btnClose img {
+  cursor: pointer;
+  filter: brightness(300%);
+ }
+ .overlay .img-text {
+  max-width: 57rem;
+  position: relative;
+  bottom: 2rem;
+  left: 1.2rem;
+
+ }
+ .overlay .img-text .next{
+  display: flex;
+  right: 1.4rem;
+  transform: translateX(50%);
+ }
+ .overlay .img-text .previous{
+  display: flex;
+  left: 0;
+  transform: translateX(-50%);
+ }
+ .overlay .arrow {
+  top: 190px;
+ }
+
+
+
+.hidden {
+  display: none;
+}
 }
 
 
