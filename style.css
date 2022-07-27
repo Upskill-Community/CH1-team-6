@@ -226,8 +226,9 @@ ul li a {
     align-items: center;
   }
   body{
-    height: 1000px;
+    height: 700px;
     overflow-x: hidden;
+    width: 101.1%;
   }
 
   header .container .madehead h1 {
@@ -241,7 +242,13 @@ ul li a {
     overflow: hidden;
     transition: 0.5s height ease-in-out;
   }
-
+.container{
+  position: absolute;
+  z-index: 8;
+  height: 4.2rem;
+  background-color: #fff;
+  width: 100.7%;
+}
 
   .madehead h1 {
     visibility: visible;
@@ -250,7 +257,9 @@ ul li a {
  
 
  .navbar-h1{
-  margin-left: 60px;
+  margin-left: 41px;
+  font-size: 2.11rem;
+  text-align: center;
  }
 
   li {
@@ -271,6 +280,7 @@ ul li a {
 
   .nav-toggle  {
     padding: 10px 0;
+    margin-left: -18px;
   }
 
   .sideImages{
@@ -293,19 +303,19 @@ ul li a {
 
   .image-list {
     position: relative;
-    top: 0;
+    top: 4.7px;
     left: -5px;
 
   }
 
   .sideImages {
-    margin-right: 20px;
+    margin-right: 16px;
 
   }
 
 .round {
   position: absolute;
-  right: 4.6rem;
+  right: 4rem;
   top: -0.1rem;
   width: 14px;
   height: 12px;
@@ -341,10 +351,17 @@ ul li a {
  
 
   .Feature-1-2 {
-    padding: 30px;
+    padding: 20px;
     /* margin-top: -710px; */
     width: 100%;
+    margin: 0;
   }
+
+.f-path-text-p2 {
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  margin-top: -15px;
+}
   .img-text{
    position: relative;
   
@@ -356,9 +373,9 @@ ul li a {
   }
 
  .product-img{
-  width: 100%;
+  width: 100.95%;
   height: 376px;
- 
+ margin-top: 29px;
 
  }
 /* .product-hero {
@@ -396,6 +413,10 @@ ul li a {
   transition: all 0.3s ease;
 }
 
+.arrow img{
+  height: 12px;
+}
+
 
   .arrow:hover {
     opacity: 0.8;
@@ -421,6 +442,7 @@ ul li a {
   .product__price{
   display: flex;
   gap: 4.4rem;
+  margin-top: -11px;
   }
 
   .price--discount {
@@ -513,7 +535,7 @@ ul li a {
   
     .cart {
       position: absolute;
-      top: 6rem;
+      top: 4.7rem;
       left: 0.7rem;
       background-color: hsl(25, 100%, 99%);
       box-shadow: 0px 10px 25px hsl(25, 100%, 3%, 0.25);
@@ -522,7 +544,7 @@ ul li a {
       max-width: 356px;
       display: grid;
       z-index: 15;
-      border-radius: 0.5rem;
+      border-radius: 0.6rem;
     }
   
     .cart__header {
@@ -551,7 +573,7 @@ ul li a {
     .cart__body--btn {
       color: hsl(25, 100%, 94%);
       background-color: hsl(26, 100%, 55%);
-      padding: 1rem;
+      padding: 1.3rem;
       font-size: 0.8rem;
       font-weight: bold;
       border-radius: 0.5rem;
@@ -574,6 +596,7 @@ ul li a {
       text-overflow: ellipsis;
       overflow: hidden;
       white-space: nowrap;
+      font-size: 1rem;
     }
   
     .product--amt {
@@ -703,6 +726,7 @@ ul li a {
 .product-hero .next:hover {
   right: 67%;
 }
+
 .product-hero .arrow {
   position: absolute;
   top: 190px;
@@ -710,8 +734,8 @@ ul li a {
 
   background-color: hsl(0, 0%, 100%);;
   border-radius: 50%;
-  width: 1.7rem;
-  height: 1.7rem;
+  width: 1.8rem;
+  height: 1.8rem;
 
   display: flex;
   align-items: center;
@@ -722,10 +746,10 @@ ul li a {
 
 .product-hero .arrow img {
   position: absolute;
-  top: 7px;
-  left: 6px;
-  width: 15px;
-  height: 15px;
+  top: 9.2px;
+  left: 9px;
+  width: 11px;
+  height: 11px;
 }
 
 .product-hero .arrow{
@@ -740,6 +764,8 @@ ul li a {
     display: flex;
     margin-top: 350px;
     flex-direction: row;
+    /* margin-left: 20px;
+    margin-right: 20px; */
   }
 
 
@@ -751,13 +777,14 @@ ul li a {
     border-radius: 10px;
     width: 58px;
     height: auto;
+    
   }
 
 
   .pic img:hover {
     border: 2px solid hsl(26, 100%, 55%);
     opacity: 0.6;
-
+    cursor: pointer;
   }
 
   .active img {
@@ -1028,7 +1055,7 @@ ul li a {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 38rem;
+  height: 41.2rem;
   background: hsl(0, 0%, 0%, 75%);
   display: flex;
   flex-direction: column;
@@ -1037,27 +1064,30 @@ ul li a {
  }
  .overlay .btnClose{
   position: absolute;
-  top: 2rem;
-  right: 33rem;
+  top: 2.5rem;
+  right: 32.8rem;
   width: 57rem;
   text-align: end;
   padding: 2rem 0;
   z-index: 2;
  }
- .overlay .btnClose img {
+ .overlay .btnClose {
   cursor: pointer;
   filter: brightness(300%);
+ }
+ .overlay .btnClose path:hover{
+  fill: #ff734f;
  }
  .overlay .img-text {
   max-width: 57rem;
   position: relative;
-  bottom: 2rem;
+  bottom: 2.5rem;
   left: 1.2rem;
 
  }
  .overlay .img-text .next{
   display: flex;
-  right: 1.4rem;
+  right: 1.3rem;
   transform: translateX(50%);
  }
  .overlay .img-text .previous{
@@ -1066,18 +1096,24 @@ ul li a {
   transform: translateX(-50%);
  }
  .overlay .arrow {
-  top: 190px;
+  top: 175px;
  }
 
+.overlay .product-img {
+  width: 290px;
+  height: 330px;
+  border-radius: 10px;
+  margin-bottom: -330px;
+  }
+
+.overlay .pic img:hover {
+      border: 2px solid hsl(26, 100%, 55%);
+      opacity: 0.6;
+      cursor: pointer;
+    }
 
 
 .hidden {
   display: none;
 }
-}
-
-
-.copyright a{
-  text-decoration: none;
-  color: hsl(26, 100%, 55%);;
 }
