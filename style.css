@@ -1124,6 +1124,9 @@ ul li a {
   top: 175px;
   padding: 20px 20px;
  }
+   .arrow img:hover{
+  filter: invert(79%) sepia(51%) saturate(6860%) hue-rotate(347deg) brightness(101%) contrast(100%)
+ }
  .overlay .arrow img{
   width: auto;
   height: 20px;
