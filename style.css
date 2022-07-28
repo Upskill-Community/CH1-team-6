@@ -376,7 +376,7 @@ ul li a {
 
  .product-img{
   width: 100.95%;
-  height: 376px;
+  height: auto;
  margin-top: 29px;
 
  }
