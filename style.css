@@ -58,7 +58,6 @@ ul li a {
 
 .navbar {
   margin-left: 30px;
-
 }
 .nav-link li a{
   color: grey;
@@ -257,9 +256,10 @@ ul li a {
  
 
  .navbar-h1{
-  margin-left: 41px;
+  margin-left: 45px;
   font-size: 2.11rem;
   text-align: center;
+  visibility: hidden;
  }
 
   li {
@@ -276,10 +276,12 @@ ul li a {
     display: block;
   }
 
- 
+ .navbar-h2{
+  display: none;
+ }
 
   .nav-toggle  {
-    padding: 10px 0;
+    padding: 12px 0;
     margin-left: -18px;
   }
 
@@ -403,9 +405,10 @@ ul li a {
   
   background-color: hsl(0, 0%, 100%);
   border-radius: 50%;
-  width: 1.8rem;
-  height: 1.8rem;
+  /* width: 1.8rem;
+  height: 1.8rem; */
 
+  padding: 13px 15px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -414,7 +417,7 @@ ul li a {
 }
 
 .arrow img{
-  height: 12px;
+  height: 15px;
 }
 
 
@@ -689,7 +692,13 @@ ul li a {
   .navbar-h1{
     padding-left:30px ;
     font-size: 25px;
+    visibility: hidden;
   }
+  .navbar-h2{
+    margin-bottom: 30px;
+    margin-left: 20px;
+  }
+ 
 
   .f-path-bold {
     width: auto;
@@ -743,6 +752,7 @@ ul li a {
   cursor: pointer;
   transition: all 0.3s ease;
 }
+
 
 .product-hero .arrow img {
   position: absolute;
@@ -1055,7 +1065,8 @@ ul li a {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 41.2rem;
+  height: 50rem;
+ 
   background: hsl(0, 0%, 0%, 75%);
   display: flex;
   flex-direction: column;
@@ -1064,20 +1075,24 @@ ul li a {
  }
  .overlay .btnClose{
   position: absolute;
-  top: 2.5rem;
-  right: 32.8rem;
+  top: 4.2rem;
+  right: 26.8rem;
   width: 57rem;
   text-align: end;
   padding: 2rem 0;
   z-index: 2;
+ 
  }
+
  .overlay .btnClose {
   cursor: pointer;
   filter: brightness(300%);
  }
- .overlay .btnClose path:hover{
-  fill: #ff734f;
+ .overlay .btnClose:hover{
+  filter: invert(79%) sepia(51%) saturate(6860%) hue-rotate(347deg) brightness(150%) contrast(100%);
  }
+
+
  .overlay .img-text {
   max-width: 57rem;
   position: relative;
@@ -1085,26 +1100,44 @@ ul li a {
   left: 1.2rem;
 
  }
+ 
  .overlay .img-text .next{
   display: flex;
-  right: 1.3rem;
+  right: 0.2rem;
   transform: translateX(50%);
+ }
+ .next img{
+  margin-left: 5px;
+  margin-top: 1px;
+  
  }
  .overlay .img-text .previous{
   display: flex;
   left: 0;
   transform: translateX(-50%);
  }
+ .previous img{
+  margin-left: 3px;
+  margin-top: 1px;
+ }
  .overlay .arrow {
   top: 175px;
+  padding: 20px 20px;
  }
-
+ .overlay .arrow img{
+  width: auto;
+  height: 20px;
+ }
 .overlay .product-img {
-  width: 290px;
-  height: 330px;
+  width: auto;
+  height: 390px;
   border-radius: 10px;
   margin-bottom: -330px;
   }
+  .overlay .pic {
+    width: 50px;
+    margin-left: 36px;
+  } 
 
 .overlay .pic img:hover {
       border: 2px solid hsl(26, 100%, 55%);
@@ -1113,7 +1146,9 @@ ul li a {
     }
 
 
+
 .hidden {
   display: none;
 }
+
 }
